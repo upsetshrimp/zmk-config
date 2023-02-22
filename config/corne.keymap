@@ -44,14 +44,14 @@
                 lower_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| S+G |     |     |     |     |   |     | LFT | DWN |  UP | RGT |      |
+// | BTCLR|     |     |     |     |     |   |     | LFT | DWN |  UP | RGT |      |
 // | SHFT |     |     |     |VOL-D|VOL-U|   | HOM | END |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                     bindings = <
-          &kp TAB      &kp N1  &kp N2    &kp N3        &kp N4        &kp N5    &kp N6    &kp N7          &kp N8     &kp N9  &kp N0  &kp BSPC
-         &trans  &shift_gui  &trans    &trans        &trans        &trans  &kp LEFT  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &trans    &trans
-        &trans      &trans  &trans    &trans  &kp C_VOL_DN  &kp C_VOL_UP  &kp HOME   &kp END          &trans     &trans  &trans    &trans
-                               &kp LGUI        &trans     &kp SPACE   &kp RET    &mo 3        &kp RALT
+         &kp TAB &kp N1  &kp N2 &kp N3  &kp N4        &kp N5          &kp N6     &kp N7    &kp N8  &kp N9    &kp N0   &kp BSPC
+         &trans  &trans  &trans &trans  &kp LGUI      &trans          &kp LEFT   &kp DOWN  &kp UP  &kp RIGHT &trans   &kp INS
+         &trans  &trans  &trans &trans  &kp C_VOL_DN  &kp C_VOL_UP    &kp HOME   &kp END   &trans  &trans    &trans   &kp DEL
+                                &kp LGUI &trans       &kp SPACE       &kp RET    &mo 3     &kp RALT
             >;
         };
 
@@ -70,10 +70,10 @@
                 };
                         system_layer {
             bindings = <
-    &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &kp B  &trans  &trans  &trans  &trans
-    &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                              &trans        &trans        &trans  &trans  &trans  &trans
+    &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &kp B  &trans  &trans  &trans  &trans
+    &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                            &trans        &trans        &trans          &trans  &trans  &trans
             >;
         };
         };
