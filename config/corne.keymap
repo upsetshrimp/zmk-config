@@ -10,8 +10,8 @@
 
 / {
     macros {
-        shift_gui : shift_gui {
-            label = "shift+gui hold";
+        shift_gui: shift_gui {
+            label = "shift_gui_hold";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
