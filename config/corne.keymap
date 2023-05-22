@@ -10,17 +10,6 @@
 
 / {
     macros {
-        shift_gui: shift_gui {
-            label = "shift_gui_hold";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LSHIFT &kp LGUI>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&kp LSHFT &kp LGUI>;
-        };
     };
 };
 
@@ -61,7 +50,6 @@
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             global-quick-tap;
-            retro-tap;
         };
         rh_pht: rh_pht {
             compatible = "zmk,behavior-hold-tap";
@@ -99,28 +87,28 @@
 
         NAV {
             bindings = <
-&trans        &trans        &trans     &trans     &trans  &trans    &kp K_UNDO  &kp K_PASTE  &kp K_COPY  &kp K_REDO      &trans  &trans
-&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL  &kp LSHFT  &trans      &kp LEFT     &kp DOWN      &kp UP   &kp RIGHT  &caps_word  &trans
-&trans        &trans        &trans     &trans     &trans  &trans      &kp HOME    &kp PG_DN   &kp PG_UP     &kp END      &trans  &trans
-                                       &trans     &trans  &trans        &trans       &trans      &trans
+&trans        &trans        &trans     &trans     &trans  &kp LS(LG(S))    &kp K_UNDO  &kp K_PASTE  &kp K_COPY  &kp K_REDO      &trans  &trans
+&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL  &kp LSHFT         &trans      &kp LEFT     &kp DOWN      &kp UP   &kp RIGHT  &caps_word  &trans
+&trans        &trans        &trans     &trans     &trans         &trans      &kp HOME    &kp PG_DN   &kp PG_UP     &kp END      &trans  &trans
+                                       &trans     &trans         &trans        &trans       &trans      &trans
             >;
         };
 
         NUM {
             bindings = <
-&trans   &kp LBKT  &kp N7  &kp N8  &kp N9  &kp RIGHT_BRACKET    &trans  &trans  &trans  &trans  &trans  &trans
-&trans   &kp SEMI  &kp N4  &kp N5  &kp N6          &kp EQUAL    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp GRAVE  &kp N1  &kp N2  &kp N3           &kp BSLH    &trans  &trans  &trans  &trans  &trans  &trans
-                           &trans  &trans             &trans    &trans  &trans  &trans
+&trans   &kp LBKT  &kp N7      &kp N8        &kp N9  &kp RIGHT_BRACKET    &trans     &trans     &trans    &trans        &trans  &trans
+&trans   &kp SEMI  &kp N4      &kp N5        &kp N6          &kp EQUAL    &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LEFT_GUI  &trans
+&trans  &kp GRAVE  &kp N1      &kp N2        &kp N3           &kp BSLH    &trans     &trans     &trans    &trans        &trans  &trans
+                           &kp PERIOD  &kp NUMBER_0          &kp MINUS    &trans     &trans     &trans
             >;
         };
 
         SYM {
             bindings = <
-&trans  &kp LEFT_BRACE  &kp AMPERSAND          &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_BRACE    &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &kp COLON     &kp DOLLAR           &kp PERCENT              &kp CARET         &kp PLUS    &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &kp TILDE       &kp EXCL                &kp AT               &kp HASH         &kp PIPE    &trans  &trans  &trans  &trans  &trans  &trans
-                                       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS   &kp UNDERSCORE    &trans  &trans  &trans
+&trans  &kp LEFT_BRACE  &kp AMPERSAND          &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_BRACE           &trans            &trans     &trans    &trans        &trans  &trans
+&trans       &kp COLON     &kp DOLLAR           &kp PERCENT              &kp CARET         &kp PLUS           &trans         &kp LSHFT  &kp LCTRL  &kp LALT  &kp LEFT_GUI  &trans
+&trans       &kp TILDE       &kp EXCL                &kp AT               &kp HASH         &kp PIPE    &kp LESS_THAN  &kp GREATER_THAN     &trans    &trans        &trans  &trans
+                                       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS   &kp UNDERSCORE           &trans            &trans     &trans
             >;
         };
 
