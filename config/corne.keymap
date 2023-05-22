@@ -53,8 +53,8 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             bindings =
-                <&none>,
-                <&none>;
+                <&kp>,
+                <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -91,7 +91,7 @@
 
             bindings = <
 &kp F15           &kp Q           &kp W               &kp E             &kp R      &kp T        &kp Y             &kp U               &kp I           &kp O                   &kp P  &kp F18
-&kp F14  &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F      &kp G        &kp H  &mt LEFT_SHIFT J  &mt LEFT_CONTROL K  &mt LEFT_ALT L  &mt LEFT_GUI SEMICOLON  &kp F17
+&kp F14  &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F      &kp G        &kp H  &hm LEFT_SHIFT J  &hm LEFT_CONTROL K  &hm LEFT_ALT L  &hm LEFT_GUI SEMICOLON  &kp F17
 &kp F13           &kp Z           &kp X               &kp C             &kp V      &kp B        &kp N             &kp M           &kp COMMA         &kp DOT                &kp FSLH  &kp F16
                                                  &kp ESCAPE         &lt 1 TAB  &kp SPACE    &lt 3 RET   &lt 2 BACKSPACE           &lt 4 DEL
             >;
