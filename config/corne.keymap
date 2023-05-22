@@ -34,6 +34,51 @@
         };
     };
 
+    behaviors {
+        lh_pht: lh_pht {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_POSITIONAL_HOLD_TAP";
+            bindings =
+                <&kp>,
+                <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
+            global-quick-tap;
+            flavor = "tap-unless-interrupted";
+            hold-trigger-key-positions = <19 20 21 22>;
+        };
+        hm: hm {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            bindings =
+                <&none>,
+                <&none>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            global-quick-tap;
+            retro-tap;
+        };
+        rh_pht: rh_pht {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RIGHT_POSITIONAL_HOLD_TAP";
+            bindings =
+                <&kp>,
+                <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
+            flavor = "tap-unless-interrupted";
+            hold-trigger-key-positions = <16 13 14 15>;
+            global-quick-tap;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
