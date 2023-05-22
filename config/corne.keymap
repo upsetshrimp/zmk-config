@@ -65,15 +65,6 @@
             hold-trigger-key-positions = <16 13 14 15>;
             global-quick-tap;
         };
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-hold-tap";
-            label = "NEW_BEHAVIOR";
-            bindings =
-                <&none>,
-                <&none>;
-
-            #binding-cells = <2>;
-        };
     };
 
     keymap {
