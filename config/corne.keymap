@@ -16,6 +16,9 @@
 #define XXX &none
 #define ___ &trans
 
+#define MEH LC(LS(LA))
+#define HYPER LG(MEH)
+
 #include "combos.dtsi"
 #include "mouse.dtsi"
 
@@ -242,9 +245,9 @@ ZMK_LAYER(base,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤          ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     &kp F14  &hml LGUI A   &hml LALT S   &hml LCTRL D  &hml LSHFT F  &kp G                   &kp H         &hmr RSHFT J  &hmr LCTRL K  &hmr LALT L   &hmr LGUI SQT   &kp F17
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤          ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    &kp F13  &kp Z         &kp X         &kp C         &kp V         &kp B                   &kp N         &kp M         &comma_morph  &dot_morph    &qexcl          &kp F16
+   &smart_mouse &kp Z         &kp X         &kp C         &kp V         &kp B                   &kp N         &kp M         &comma_morph  &dot_morph    &qexcl          &kp F16
 //╰──────╯ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤          ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ╰──────╯
-                                        &smart_mouse  &lt_spc NAV 0 &lt FN RET                SMART_NUM     &smart_shft       BSPC
+                                        &kp HYPER    &lt_spc NAV 0 &lt FN RET                SMART_NUM     &smart_shft     &kp MEH
 //                                     ╰─────────────┴─────────────┴─────────────╯          ╰─────────────┴─────────────┴─────────────╯
 )
 ZMK_LAYER(nav,
