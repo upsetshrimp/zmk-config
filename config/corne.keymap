@@ -16,7 +16,7 @@
 #define XXX &none
 #define ___ &trans
 
-#define MEH LC(LS(LA))
+#define MEH LC(LS(LALT))
 #define HYPER LG(MEH)
 
 #include "combos.dtsi"
